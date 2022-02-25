@@ -1,8 +1,8 @@
 package client
 
 import (
-	"fasc_openapi_go_sdk/model/commonModel"
-	"fasc_openapi_go_sdk/model/requestModel"
+	"github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
+	"github.com/ZZWisking/fasc_openapi_go_sdk/model/requestModel"
 	"fmt"
 	"os"
 	"strings"

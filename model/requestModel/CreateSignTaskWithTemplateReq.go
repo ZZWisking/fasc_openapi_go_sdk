@@ -1,7 +1,7 @@
 package requestModel
 
 import (
-	commonModel2 "fasc_openapi_go_sdk/model/commonModel"
+	commonModel2 "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 )
 
 // CreateSignTaskWithTemplateReq 创建签署任务基于签署模板

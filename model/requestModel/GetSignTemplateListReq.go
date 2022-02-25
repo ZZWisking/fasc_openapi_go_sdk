@@ -1,7 +1,7 @@
 package requestModel
 
 import (
-	"fasc_openapi_go_sdk/model/commonModel"
+	"github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 )
 
 type GetSignTemplateListReq struct {
