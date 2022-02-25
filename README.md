@@ -1,2 +1,3 @@
-# fasc_openapi_go_sdk
-该开源项目为基于go 1.16开发的 sdk包
+版本:go 1.16
+
+调用示例: GetToken_test.go文件  func TestOpenApiClient_GetAuthToken(t *testing.T)
