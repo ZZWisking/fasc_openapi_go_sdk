@@ -15,9 +15,9 @@ const (
 	ContentTypeZip  = "application/zip"
 	ContentTypePdf  =  "application/pdf"
 	ContentTypeFile = "application/*"
-	AppId           = "CLOUD00000025"
-	AppSecret       = "YKZ4LMV21P6HDWL0UVL01YRR5GZOWVZB"
-	ServerUrl       = "https://uat-api.fadada.com/api/v5"
+	AppId           = ""
+	AppSecret       = ""
+	ServerUrl       = ""
 )
 
 
