@@ -9,11 +9,12 @@ import (
 )
 
 const (
-	GetSignTemplateListReqUrl   = "/sign-template/get-list"   //获取签署模板列表
-	FileUploadReqUrl            = "/file/upload-instant"      //上传即时文件
-	GetDocTemplateListReqUrl    = "/doc-template/get-list"    //查询文档模板列表
-	GetDocTemplateDetailReqUrl  = "/doc-template/get-detail"  //获取文档模板详情
-	GetSignTemplateDetailReqUrl = "/sign-template/get-detail" //获取签署模板详情
+	GetSignTemplateListReqUrl   = "/sign-template/get-list"      //获取签署模板列表
+	FileUploadReqUrl            = "/file/upload-instant"         //上传即时文件
+	GetDocTemplateListReqUrl    = "/doc-template/get-list"       //查询文档模板列表
+	GetDocTemplateDetailReqUrl  = "/doc-template/get-detail"     //获取文档模板详情
+	GetSignTemplateDetailReqUrl = "/sign-template/get-detail"    //获取签署模板详情
+	GetPageManageUrlReqUrl      = "/template/get-pagemanage-url" //获取模板管理链接
 )
 
 // UploadFileResponse 上传即时文件
@@ -111,4 +112,23 @@ func (o *openApiClient) GetDocTemplateListResponse(docTemListReq *requestModel.G
 	}
 	docTemListRes.RequestId = requestId
 	return docTemListRes
+}
+
+// GetPageManageUrlResponse 获取模板管理链接
+func (o *openApiClient) GetPageManageUrlResponse(pageManageUrlReq *requestModel.GetPageManageUrlReq, accessToken string) responseModel.GetPageManageUrlRes {
+	var pageManageUrlRes responseModel.GetPageManageUrlRes
+	reqStr, err := json.Marshal(pageManageUrlReq)
+	if err != nil {
+		fmt.Println("json序列化失败")
+	}
+	headMap := o.SetReqHeadMap(accessToken, string(reqStr))
+	bodyStr := "bizContent" + "=" + string(reqStr)                               //拼接post提交body参数
+	requestUrl := o.serverUrl + GetPageManageUrlReqUrl                           //接口请求api地址
+	rspBody, requestId := common2.SendPost(requestUrl, headMap, []byte(bodyStr)) //发送post请求
+	err = json.Unmarshal(rspBody, &pageManageUrlRes)
+	if err != nil {
+		fmt.Println("json字符串转为struct失败")
+	}
+	pageManageUrlRes.RequestId = requestId
+	return pageManageUrlRes
 }

@@ -10,8 +10,8 @@ type GetDocTemplateDetailRes struct {
 }
 
 type GetDocTemplateDetailResData struct {
-	DocTemplateId     string            `json:"docTemplateId"`
-	DocTemplateName   string            `json:"docTemplateName"`
-	DocTemplateStatus string            `json:"docTemplateStatus"`
+	DocTemplateId     string              `json:"docTemplateId"`
+	DocTemplateName   string              `json:"docTemplateName"`
+	DocTemplateStatus string              `json:"docTemplateStatus"`
 	DocFields         []commonModel.Field `json:"docFields"`
 }

@@ -1,7 +1,7 @@
 package requestModel
 
 type DeleteSignTaskField struct {
-	DocId     int       `json:"docId,omitempty"`
+	DocId     int      `json:"docId,omitempty"`
 	DocFields []string `json:"fieldIds,omitempty"`
 }
 

@@ -30,6 +30,7 @@ const (
 	FinalizeSignTaskDocReqUrl     = "/sign-task/doc/finalize"         //定稿签署任务文档
 	BlockSignTaskReqUrl           = "/sign-task/block"                //阻塞签署任务
 	UnblockSignTaskReqUrl         = "/sign-task/unblock"              //解阻签署任务
+	UrgeSignTaskReqUrl            = "/sign-task/urge-sign"            //催办签署任务
 	FinishSignTaskReqUrl          = "/sign-task/finish"               //结束签署任务
 	ContentType                   = "application/json"
 )
@@ -309,7 +310,7 @@ func (o *openApiClient) FinalizeSignTaskDoc(finalizeDocReq *requestModel.Finaliz
 	}
 	headMap := o.SetReqHeadMap(accessToken, string(reqStr))
 	bodyStr := "bizContent" + "=" + string(reqStr)                               //拼接post提交body参数
-	requestUrl := o.serverUrl + FinishSignTaskReqUrl                             //接口请求api地址
+	requestUrl := o.serverUrl + FinalizeSignTaskDocReqUrl                        //接口请求api地址
 	rspBody, requestId := common2.SendPost(requestUrl, headMap, []byte(bodyStr)) //发送post请求
 	err = json.Unmarshal(rspBody, &finalizeDocRes)
 	if err != nil {
@@ -355,6 +356,25 @@ func (o *openApiClient) UnBlockSignTask(unBlockSignTaskReq *requestModel.UnBlock
 	}
 	unBlockSignTaskRes.RequestId = requestId
 	return unBlockSignTaskRes
+}
+
+// UrgeSignTask 催办签署任务
+func (o *openApiClient) UrgeSignTask(urgeSignTaskReq *requestModel.UrgeSignTaskReq, accessToken string) responseModel.UrgeSignTaskRes {
+	var urgeSignTaskRes responseModel.UrgeSignTaskRes
+	reqStr, err := json.Marshal(urgeSignTaskReq)
+	if err != nil {
+		fmt.Println("json序列化失败")
+	}
+	headMap := o.SetReqHeadMap(accessToken, string(reqStr))
+	bodyStr := "bizContent" + "=" + string(reqStr)                               //拼接post提交body参数
+	requestUrl := o.serverUrl + UrgeSignTaskReqUrl                               //接口请求api地址
+	rspBody, requestId := common2.SendPost(requestUrl, headMap, []byte(bodyStr)) //发送post请求
+	err = json.Unmarshal(rspBody, &urgeSignTaskRes)
+	if err != nil {
+		fmt.Println("json字符串转为struct失败")
+	}
+	urgeSignTaskRes.RequestId = requestId
+	return urgeSignTaskRes
 }
 
 // FinishSignTask 结束签署任务

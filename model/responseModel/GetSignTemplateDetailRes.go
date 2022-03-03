@@ -9,18 +9,24 @@ type GetSignTemplateDetailReq struct {
 	Data      GetSignTemplateDetailReqData `json:"data"`
 }
 
+type Attach struct {
+	AttachId   int    `json:"attachId"`
+	AttachName string `json:"attachName"`
+}
+
 type GetSignTemplateDetailReqData struct {
 	SignTemplateId     string      `json:"signTemplateId"`
 	SignTemplateName   string      `json:"signTemplateName"`
 	SignTemplateStatus string      `json:"signTemplateStatus"`
-	Docs               []Docs      `json:"docs"`
+	Docs               []Doc       `json:"docs"`
+	Attachs            []Attach    `json:"attachs"`
 	FillInOrder        bool        `json:"fillInOrder"`
 	SignInOrder        bool        `json:"signInOrder"`
 	FillActors         []FillActor `json:"fillActors"`
 	SignActors         []SignActor `json:"signActors"`
 }
 
-type Docs struct {
+type Doc struct {
 	DocId     int                 `json:"docId"`
 	DocName   string              `json:"docName"`
 	DocFields []commonModel.Field `json:"docFields"`
