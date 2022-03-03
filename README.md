@@ -6,7 +6,7 @@
 
 import (
 "fmt"
-"github.com/ZZWisking/fasc_openapi_go_sdk/client"
+"github.com/ZZWisking/github.com/ZZWisking/fasc_openapi_go_sdk/client"
 )
 
 const(

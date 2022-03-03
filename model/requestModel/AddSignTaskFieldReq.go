@@ -1,6 +1,6 @@
 package requestModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 type AddSignTaskField struct {
 	DocId     int                  `json:"docId,omitempty"`

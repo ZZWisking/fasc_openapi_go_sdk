@@ -1,6 +1,6 @@
 package requestModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 // GetSignTemplateDetailReq 获取签署模板详情
 type GetSignTemplateDetailReq struct {

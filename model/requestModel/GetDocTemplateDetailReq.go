@@ -1,6 +1,6 @@
 package requestModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 // GetDocTemplateDetailReq 获取文档模板详情
 type GetDocTemplateDetailReq struct {

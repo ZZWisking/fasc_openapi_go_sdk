@@ -1,6 +1,6 @@
 package requestModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 // GetBillingUrlReq 获取计费链接
 type GetBillingUrlReq struct {

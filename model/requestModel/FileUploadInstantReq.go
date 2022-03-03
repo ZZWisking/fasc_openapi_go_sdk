@@ -1,6 +1,6 @@
 package requestModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 // FileUploadInstantReq 上传即时文件
 type FileUploadInstantReq struct {

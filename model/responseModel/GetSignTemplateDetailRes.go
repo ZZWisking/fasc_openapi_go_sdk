@@ -1,6 +1,6 @@
 package responseModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 type GetSignTemplateDetailReq struct {
 	RequestId string                       `json:"requestId"`

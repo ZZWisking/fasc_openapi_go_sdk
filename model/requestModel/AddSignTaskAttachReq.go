@@ -1,6 +1,6 @@
 package requestModel
 
-import commonModel2 "fasc_openapi_go_sdk/model/commonModel"
+import commonModel2 "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 // AddSignTaskAttachReq 添加签署任务附件
 

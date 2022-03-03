@@ -1,7 +1,7 @@
 package requestModel
 
 import (
-	commonModel2 "fasc_openapi_go_sdk/model/commonModel"
+	commonModel2 "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 )
 
 // GetCorpAuthUrlReq 获取企业用户授权链接

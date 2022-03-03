@@ -1,7 +1,7 @@
 package requestModel
 
 import (
-	"fasc_openapi_go_sdk/model/commonModel"
+	"github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 )
 
 // GetSignTemplateListReq 获取签署模板列表

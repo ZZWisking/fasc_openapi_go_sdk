@@ -1,6 +1,6 @@
 package requestModel
 
-import "fasc_openapi_go_sdk/model/commonModel"
+import "github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 
 // GetSignTaskFieldUrlReq 获取签署任务控件设置链接
 type GetSignTaskFieldUrlReq struct {
