@@ -6,16 +6,16 @@ import (
 )
 
 // GetSignByMap 计算签名参数
-func GetSignByMap(headMap map[string]string,timestamp string,appSecret string)string   {
+func GetSignByMap(headMap map[string]string, timestamp string, appSecret string) string {
 	signContent := SortMapForSign(headMap)
 	signText := Sha256(signContent)
-	secretSigningbyte := HmacSha256byte(timestamp,appSecret) //临时签名密钥
-	sign := HmacSha256(signText,secretSigningbyte)
+	secretSigningbyte := HmacSha256byte(timestamp, appSecret) //临时签名密钥
+	sign := HmacSha256(signText, secretSigningbyte)
 	return strings.ToLower(sign)
 }
 
 // SortMapForSign 将map key进行排序拼接
-func SortMapForSign(headMap map[string]string)string  {
+func SortMapForSign(headMap map[string]string) string {
 	var keys []string
 	for k := range headMap {
 		keys = append(keys, k)
@@ -24,10 +24,10 @@ func SortMapForSign(headMap map[string]string)string  {
 	sort.Strings(keys)
 	// To perform the opertion you want
 	for _, k := range keys {
-		if len(headMap[k]) != 0{
-			headStr = append(headStr,k+ "="+ headMap[k] )
+		if len(headMap[k]) != 0 {
+			headStr = append(headStr, k+"="+headMap[k])
 		}
 	}
-	signContent := strings.Join(headStr,"&")
+	signContent := strings.Join(headStr, "&")
 	return signContent
 }

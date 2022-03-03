@@ -36,7 +36,7 @@ func readMachineId() []byte {
 	return id
 }
 
-// GUID returns a new unique ObjectId.
+// GetGUID GUID returns a new unique ObjectId.
 // 4byte 时间，
 // 3byte 机器ID
 // 2byte pid

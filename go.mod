@@ -1,4 +1,4 @@
-module github.com/ZZWisking/fasc_openapi_go_sdk
+module fasc_openapi_go_sdk
 
 go 1.16
 
