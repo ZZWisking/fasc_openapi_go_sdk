@@ -1,10 +1,10 @@
 package client
 
 import (
+	"fmt"
 	"github.com/ZZWisking/fasc_openapi_go_sdk/common"
 	"github.com/ZZWisking/fasc_openapi_go_sdk/model/commonModel"
 	"github.com/ZZWisking/fasc_openapi_go_sdk/model/requestModel"
-	"fmt"
 	"os"
 	"strings"
 	"testing"

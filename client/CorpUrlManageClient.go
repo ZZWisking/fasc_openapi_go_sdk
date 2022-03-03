@@ -2,10 +2,10 @@ package client
 
 import (
 	"encoding/json"
+	"fmt"
 	common2 "github.com/ZZWisking/fasc_openapi_go_sdk/common"
 	"github.com/ZZWisking/fasc_openapi_go_sdk/model/requestModel"
 	"github.com/ZZWisking/fasc_openapi_go_sdk/model/responseModel"
-	"fmt"
 )
 
 const (
